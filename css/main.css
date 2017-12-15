@@ -441,7 +441,6 @@ body {
 .container {
   position: relative;
   min-height: 100%;
-  left: 320px;
 }
 .header-inner {
   margin: 0 auto;
@@ -1823,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffb441;
+  background: #f2343b;
 }
 .links-of-blogroll {
   font-size: 13px;
