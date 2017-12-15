@@ -82,6 +82,7 @@ $(document).ready(function () {
   var xPos, yPos;
 
   var sidebarToggleMotion = {
+    leftContainer:$('.sidebar-position-left'),
     toggleEl: $('.sidebar-toggle'),
     dimmerEl: $('#sidebar-dimmer'),
     sidebarEl: $('.sidebar'),
@@ -106,7 +107,13 @@ $(document).ready(function () {
         });
     },
     clickHandler: function () {
-      this.isSidebarVisible ? this.hideSidebar() : this.showSidebar();
+      if(this.isSidebarVisible){
+        this.hideSidebar();
+        this.leftContainer.css('left','0px');
+      }else{
+        this.showSidebar();
+        this.leftContainer.css('left','320px');
+      }
       this.isSidebarVisible = !this.isSidebarVisible;
     },
     mouseEnterHandler: function () {
